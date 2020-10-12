@@ -1,0 +1,38 @@
+{
+	"name": "unicorn-fun-cli",
+	"version": "0.0.1",
+	"description": "Cross platform CLI Alerts with colors & colored symbols for success, info, warning, error. Works on macOS, Linux and Windows.",
+	"license": "MIT",
+	"repository": "thebestdon/cli-alerts",
+	"author": {
+		"name": "Donatas Bakanas",
+		"email": "donatas_bakanas@yahoo.com",
+		"url": "https://github.com/thebestdon"
+	},
+	"bin": {
+		"alert": "index.js"
+	},
+	"engines": {
+		"node": ">=8"
+	},
+	"scripts": {
+		"test": "ava test.js",
+		"format": "prettier --write \"./**/*.{js,json}\""
+	},
+	"files": [
+		"index.js"
+	],
+	"keywords": [
+		"cli",
+		"cli-app"
+	],
+	"dependencies": {
+		"chalk": "^4.1.0",
+		"log-symbols": "^4.0.0"
+	},
+	"devDependencies": {
+		"ava": "^3.13.0",
+		"execa": "^4.0.3",
+		"prettier": "^2.1.2"
+	}
+}
