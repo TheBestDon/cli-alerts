@@ -1,6 +1,6 @@
 {
-	"name": "unicorn-fun-cli",
-	"version": "0.0.2",
+	"name": "cli-alerts-color",
+	"version": "0.0.1",
 	"description": "Cross platform CLI Alerts with colors & colored symbols for success, info, warning, error. Works on macOS, Linux and Windows.",
 	"license": "MIT",
 	"repository": "thebestdon/cli-alerts",
