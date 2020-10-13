@@ -39,18 +39,7 @@ const alert = options => {
 			break
 	}
 }
-alert({
-	type: 'success',
-	msg: "You have successfuly finished the task!",
-})
-alert({
-	type: 'info',
-	msg: "You have successfuly finished the task!",
-})
-alert({
-	type: 'warning',
-	msg: "You have finished the the task with warnings",
-})
+
 alert({
 	type: 'error',
 	msg: "You have failed.",
