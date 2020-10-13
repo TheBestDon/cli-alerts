@@ -1,57 +1,88 @@
-# node-cli-boilerplate
+<h4 align="center">
+    <a href="https://github.com/thebestdon/cli-alerts">
+        <img src="./images/Screenshot_2020-10-13_23-48-31.png" alt="cli-alerts screenshot" />
+    </a>
+    <br>
+    <br>
 
-> Boilerplate to kickstart creating a Node.js command-line tool
+Cross platform CLI Alerts with colors & colored symbols for success, info, warning, error.
+<br>
+Work on macOS, Linux, and Windows.
+</h4>
 
-This is what I use for [my own command-line tools](https://www.npmjs.com/~sindresorhus).
+<br>
 
-Also check out [`node-module-boilerplate`](https://github.com/sindresorhus/node-module-boilerplate).
+# cli-alerts
 
-## Getting started
-
-**Click the "Use this template" button.**
-
-Alternatively, create a new directory and then run:
-
-```
-$ curl -fsSL https://github.com/sindresorhus/node-cli-boilerplate/archive/master.tar.gz | tar -xz --strip-components=1
-```
-
-There's also a [Yeoman generator](https://github.com/sindresorhus/generator-nm).
-
-
----
-
-**Remove everything from here and above**
-
----
-
-
-# unicorn-fun-cli [![Build Status](https://travis-ci.org/YOUR-GITHUB-USERNAME/unicorn-fun-cli.svg?branch=master)](https://travis-ci.org/YOUR-GITHUB-USERNAME/unicorn-fun-cli)
-
-> My awesome command-line tool
-
+[![📟](./images/install.png)](./../../)
 
 ## Install
 
-```
-$ npm install --global unicorn-fun-cli
+```sh
+npm install cli-alerts
 ```
 
+<br>
+
+[![⚙️](./images/usage.png)](./../../)
 
 ## Usage
 
+```js
+const alert = require('cli-alerts');
+
+// Provide the type, msg, and name options.
+alert({type: `success`, msg: `Everything finished!`});
+// Prints: ✔ SUCCESS Everything finished!
+
+alert({type: `success`, msg: `Everything finished!`, name: `DONE`});
+// Prints: ✔ DONE Everything finished!
+
+alert({type: `warning`, msg: `You didn't add something!`});
+// Prints: ⚠ WARNING You didn't add something!
+
+alert({type: `info`, msg: `Awais is awesome!`});
+// Prints: ℹ INFO Awais is awesome!
+
+alert({type: `error`, msg: `Something went wrong!`});
+// Prints: ✖ ERROR Something went wrong!
 ```
-$ unicorn-fun --help
 
-  Usage
-    $ unicorn-fun [input]
+<br />
 
-  Options
-    --postfix  Lorem ipsum  [Default: rainbows]
+[![📃](./images/options.png)](./../../)
 
-  Examples
-    $ cli-name
-    unicorns & rainbows
-    $ cli-name ponies
-    ponies & rainbows
-```
+## API
+
+### alert(options)
+
+#### ❯ options
+
+Type: `object`<br>
+Default: `{}`
+
+You can specify the options below.
+
+##### ❯ type
+
+Type: `string`<br>
+Default: `error`
+
+##### ❯ msg
+
+Type: `string`<br>
+Default: `You forgot to define all options.` (Error message)
+
+##### ❯ name
+
+Type: `string`<br>
+Default: `''` (Empty string)
+
+<br>
+
+## License & Conduct
+
+- MIT © [Donatas Bakanas](https://twitter.com/donas04/)
+- [Code of Conduct](code-of-conduct.md)
+
+<br>
