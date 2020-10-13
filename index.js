@@ -20,23 +20,40 @@ const alert = options => {
 		...defaultOptions,
 		...options
 	}
-	const { type, msg } = opts
+	const { type, msg, name } = opts
+	const printName = name ? ` ${name} `.toUpperCase() : ` ${type} `.toUpperCase()
 	switch (type) {
 		case 'success':
-			console.log(`\n${sym.success} ${greenI('SUCCESS')} ${green(msg)}\n`)
-			break;
+			console.log(`\n${sym.success} ${greenI(printName)} ${green(msg)}\n`)
+			break
 		case 'error':
-			console.log(`\n${sym.error} ${redI('ERROR')} ${redB(msg)}\n`)
-			break;
+			console.log(`\n${sym.error} ${redI(printName)} ${redB(msg)}\n`)
+			break
 		case 'warning':
-			console.log(`\n${sym.warning} ${orangeI('WARNING')} ${orange(msg)}\n`)
-			break;
+			console.log(`\n${sym.warning} ${orangeI(printName)} ${orange(msg)}\n`)
+			break
 		case 'info':
-			console.log(`\n${sym.info} ${blue('INFO')} ${blueI(msg)}\n`)
-			break;
+			console.log(`\n${sym.info} ${blueI(printName)} ${blue(msg)}\n`)
+			break
 		default:
 			break
 	}
 }
 
-alert()
+alert({
+	type: 'success',
+	msg: 'Everything was finished',
+	name: `testing`
+})
+alert({
+	type: 'warning',
+	msg: 'Something missing'
+})
+alert({
+	type: 'info',
+	msg: 'Don is cool'
+})
+alert({
+	type: 'error',
+	msg: 'Everything went wrong'
+})
